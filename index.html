@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tasks</title>
+
+  <style>
+    :root {
+      --bg: #f7f7f9;
+      --card: #ffffff;
+      --border: #e2e2e7;
+      --text: #333;
+      --done: #7d7d7d;
+      --primary: #4e7bff;
+      --primary-light: #e8edff;
+
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1E1E1F;
+        --card: #2A2A2B;
+        --border: #3C3C3D;
+        --text: #ededed;
+        --done: #8a8a8a;
+        --primary: #7aa0ff;
+        --primary-light: #2f3546;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      padding: 15px;
+      color: var(--text);
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    #inputRow {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    #task-input {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--card);
+      outline: none;
+      font-size: 14px;
+      transition: 0.2s;
+      color: #e2e2e7;
+    }
+
+    #task-input:focus {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .btn {
+      background: var(--primary);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      filter: brightness(1.1);
+    }
+
+    #tasks {
+      margin-top: 5px;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: left;
+      background: var(--card);
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      border: 1px solid var(--border);
+      transition: 0.25s ease;
+    }
+
+    .task:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .task-title {
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+      align-items: left;
+    }
+
+    .task-title.done {
+      text-decoration: line-through;
+      color: var(--done);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .delete-btn {
+      border: none;
+      background: transparent;
+      color: var(--done);
+      font-size: 16px;
+      cursor: pointer;
+      padding: 4px;
+      transition: 0.2s;
+    }
+
+    .delete-btn:hover {
+      color: red;
+      transform: scale(1.2);
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h3>Today</h3>
+
+  <div id="inputRow">
+    <input id="task-input" placeholder="Add a task…">
+    <button class="btn" onclick="addTask()">Add</button>
+  </div>
+
+  <div id="tasks"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

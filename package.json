@@ -1,0 +1,17 @@
+{
+  "name": "menubar-tasks",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Menu bar task app",
+  "dependencies": {
+    "electron": "^34.5.8",
+    "menubar": "^9.5.2"
+  }
+}
