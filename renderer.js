@@ -58,3 +58,44 @@ ipcRenderer.on("load-tasks", (event, tasks) => {
     }, 40);
   });
 });
+document.getElementById("historyBtn").onclick = () => {
+  ipcRenderer.send("request-history");
+};
+
+ipcRenderer.on("show-history", (event, list) => {
+  const popup = document.getElementById("historyPopup");
+
+  if (popup.style.display === "block") {
+    popup.style.display = "none";
+    return;
+  }
+
+  popup.innerHTML = list.length === 0 
+    ? "<i>No completed tasks</i>"
+    : list.map(t =>
+        `<div style='margin-bottom:8px'>
+          ${t.title} <br>
+          <span style='opacity:0.6'>${new Date(t.completedAt).toLocaleString()}</span>
+         </div>`
+      ).join("");
+
+  popup.style.display = "block";
+});
+// Close history popup when clicking anywhere else
+document.addEventListener("mousedown", (e) => {
+  const popup = document.getElementById("historyPopup");
+  const historyBtn = document.getElementById("historyBtn");
+
+  // If popup is not open → ignore
+  if (popup.style.display !== "block") return;
+
+  // If clicking inside popup → do nothing
+  if (popup.contains(e.target)) return;
+
+  // If clicking the button → do nothing
+  if (historyBtn.contains(e.target)) return;
+
+  // Otherwise hide popup
+  popup.style.display = "none";
+});
+
