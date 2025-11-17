@@ -13,4 +13,4 @@ Work in progress :)
 18th Nov:
 
 
-<img width="348" height="462" alt="Sneak Peek" src="https://github.com/user-attachments/assets/3f76c1c5-3e8f-485a-b8bd-61c47351951e" />
+<img width="348" height="462" alt="Sneak Peek" src="https://github.<img width="402" height="463" alt="Screenshot 2025-11-18 at 12 20 29 AM" src="https://github.com/user-attachments/assets/e483fd51-165d-4d4b-b0ab-4174a0f0e089" />
