@@ -12,6 +12,7 @@
   "description": "Menu bar task app",
   "dependencies": {
     "electron": "^34.5.8",
-    "menubar": "^9.5.2"
+    "menubar": "^9.5.2",
+    "systeminformation": "^5.27.11"
   }
 }

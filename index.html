@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Tasks</title>
 
+  <script type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   <style>
     :root {
       --bg: #f7f7f9;
@@ -59,7 +64,7 @@
       outline: none;
       font-size: 14px;
       transition: 0.2s;
-      color: #e2e2e7;
+      color: var(--text);
     }
 
     #task-input:focus {
@@ -88,33 +93,35 @@
 
     .task {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: left;
       background: var(--card);
       padding: 10px 12px;
       border-radius: var(--radius);
       margin-bottom: 10px;
       border: 1px solid var(--border);
-      transition: 0.25s ease;
+      transition: 0.35s ease-in;
+      gap: 10px;
     }
 
     .task:hover {
       border-color: var(--primary);
       transform: translateY(-1px);
+      background-color: #dedede;
+      color: #4e7bff;
+      transition: 0.22s ease-in-out;
     }
 
     .task-title {
+      flex: 1;
       font-size: 14px;
-      cursor: pointer;
       transition: 0.2s;
-      align-items: left;
     }
 
     .task-title.done {
       text-decoration: line-through;
       color: var(--done);
       opacity: 0.7;
-      transition: all 0.3s ease;
     }
 
     .delete-btn {
@@ -125,6 +132,11 @@
       cursor: pointer;
       padding: 4px;
       transition: 0.2s;
+      opacity: 0;
+    }
+
+    .task:hover .delete-btn {
+      opacity: 1;
     }
 
     .delete-btn:hover {
@@ -147,5 +159,6 @@
   <div id="tasks"></div>
 
   <script src="renderer.js"></script>
+
 </body>
 </html>
