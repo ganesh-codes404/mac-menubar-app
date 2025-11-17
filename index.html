@@ -33,14 +33,17 @@
         --primary-light: #2f3546;
       }
     }
-
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      padding: 15px;
-      color: var(--text);
-    }
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  padding: 15px;
+  color: var(--text);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* make body at least full viewport height */
+}
 
     h3 {
       margin-top: 0;
@@ -88,8 +91,12 @@
     }
 
     #tasks {
-      margin-top: 5px;
-    }
+  margin-top: 5px;
+  padding-bottom: 60px;  /* slightly larger than navbar height */
+  padding: 16px;
+  margin-bottom: 30px;
+}
+
 
     .task {
       display: flex;
@@ -143,17 +150,68 @@
       color: red;
       transform: scale(1.2);
     }
+/* Bottom navbar */
+.temps {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.tmeps a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.temps a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.temps a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
 
   </style>
 
 </head>
 <body>
 
-  <h3>Today <div id="historyBtn"
-    style="position:absolute; top:10px; right:14px; cursor:pointer; opacity:0.6;">
- <ion-icon name="time-outline" style="font-size:20px;"></ion-icon>
-</div>
-</h3>
+  <h3 style="position: relative; display: flex; align-items: center; gap: 10px;">
+    Tasked-up
+    <div style="display: flex; gap: 10px; margin-left: 10px;">
+    <a href="https://x.com" target="_blank" style="opacity:0.8;">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           width="18" height="18" fill="#777" viewBox="0 0 24 24">
+        <path d="M18.244 2h3.298l-7.19 8.21 8.483 11.79H16.74l-5.242-6.86L5.74 22h-3.3l7.673-8.76L1 2h7.484l4.713 6.2L18.244 2zm-1.157 17.52h1.826L7.084 4.35H5.17l11.917 15.17z"/>
+      </svg>
+    </a>
+      <a href="https://github.com" target="_blank" style="text-decoration:none; opacity:0.8;">
+        <ion-icon name="logo-github" style="font-size:18px; color:#777;"></ion-icon>
+      </a>
+      <a href="https://chatgpt.com" target="_blank" style="text-decoration:none; opacity:0.8;">
+        <ion-icon name="sparkles-outline" style="font-size:18px; color:#777;"></ion-icon>
+      </a>
+      <a href="http://mail.google.com" target="_blank" style="text-decoration: none; opacity: 0.8;">
+        <ion-icon name="mail" style="font-size: 18px; color: #777;"></ion-icon>
+      </a>
+      
+    </div>
+    <div id="historyBtn"
+      style="position:absolute; right:14px; cursor:pointer; opacity:0.6;">
+      <ion-icon name="time-outline" style="font-size:20px;"></ion-icon>
+    </div>
+  </h3>
+  
+  
 
   <div id="inputRow">
     <input id="task-input" placeholder="Add a task…">
@@ -176,6 +234,7 @@
   box-shadow:0 4px 12px rgba(0,0,0,0.2);
   font-size:12px;">
 </div>
+<div id="temps"></div>
 
 </body>
 </html>

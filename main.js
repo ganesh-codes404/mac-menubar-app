@@ -98,7 +98,7 @@ const mb = menubar({
       contextIsolation: false,
     },
   },
-  icon: path.join(__dirname, "iconTemplate.png"),
+  icon: path.join(__dirname, " -7.jpg"),
 });
 
 mb.on("ready", () => {
