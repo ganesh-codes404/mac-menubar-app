@@ -1,17 +1,4 @@
 {
   "tasks": [],
-  "completed": [
-    {
-      "title": "Yoga",
-      "completedAt": 1763405410328
-    },
-    {
-      "title": "Code",
-      "completedAt": 1763405518906
-    },
-    {
-      "title": "Walk",
-      "completedAt": 1763405520006
-    }
-  ]
+  "completed": []
 }
