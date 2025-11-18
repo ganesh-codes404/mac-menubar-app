@@ -40,18 +40,18 @@ Step 3: Make sure there are no errors and run this command to build a `.dmg` or 
 ```
 npm run dist
 ```
-Step 4: Open the `.dmg` or `.exe` file from Finder or FileExplorer and open it, it should take you to the installation screen
+Step 4: Open the `.dmg` or `.exe` file from Finder or FileExplorer, it should take you to the installation screen
 
 
 ## Screenshots
 
-<img width="348" height="464" alt="SS2" src="https://github.com/user-attachments/assets/97410714-3404-4619-8073-dacfc1c013be" />
+<img width="348" height="444" alt="SS2" src="https://github.com/user-attachments/assets/97410714-3404-4619-8073-dacfc1c013be" />
 
-<img width="348" height="468" alt="SS1" src="https://github.com/user-attachments/assets/f8bddd52-64ff-4932-a1a3-064ea3ecfd47" />
+<img width="348" height="444" alt="SS1" src="https://github.com/user-attachments/assets/f8bddd52-64ff-4932-a1a3-064ea3ecfd47" />
 
-<img width="356" height="461" alt="SS3" src="https://github.com/user-attachments/assets/00109419-813d-4c3c-888b-e05c3471fb2c" />
+<img width="356" height="444" alt="SS3" src="https://github.com/user-attachments/assets/00109419-813d-4c3c-888b-e05c3471fb2c" />
 
-<img width="356" height="459" alt="SS4" src="https://github.com/user-attachments/assets/6fb618e3-f86c-4df7-ba72-1cf1ce522f9c" />
+<img width="356" height="444" alt="SS4" src="https://github.com/user-attachments/assets/6fb618e3-f86c-4df7-ba72-1cf1ce522f9c" />
 
 <img width="1095" height="767" alt="SS5" src="https://github.com/user-attachments/assets/0dec1398-447a-42d1-8054-97322ba07cdd" />
 
