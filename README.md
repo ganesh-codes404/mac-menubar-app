@@ -9,6 +9,7 @@ A lightweight, distraction-free task manager that lives in your Operating System
 - Runs a seperate instance of your default browser to prevent distractions.
 - Once logged in, the cookies will remain as long as your browser holds them for.
 - Secure and no data collection, the settings of your browser will reflect in this app.
+- You can customize the icon that is visible in the menu bar.
 
 ## Installation Guide
 
