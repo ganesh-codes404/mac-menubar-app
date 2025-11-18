@@ -99,3 +99,6 @@ document.addEventListener("mousedown", (e) => {
   popup.style.display = "none";
 });
 
+ipcRenderer.on("cpu-temp", (event, temp) => {
+  document.getElementById("cpuValue").textContent = temp;
+});

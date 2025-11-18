@@ -98,7 +98,7 @@ const mb = menubar({
       contextIsolation: false,
     },
   },
-  icon: path.join(__dirname, " -7.jpg"),
+  icon: path.join(__dirname, "/icons/1.jpg"),
 });
 
 mb.on("ready", () => {
@@ -160,3 +160,16 @@ ipcMain.on("request-history", () => {
 ipcMain.on("request-history-cache", () => {
   mb.window.webContents.send("load-history", completedTasks);
 });
+const { exec } = require("child_process");
+
+function getCpuTemp(callback) {
+  exec("osx-cpu-temp", (err, stdout) => {
+    if (err) return callback(null);
+    callback(stdout.trim()); // Example: "52.0°C"
+  });
+}
+setInterval(() => {
+  getCpuTemp((temp) => {
+    if (temp) mb.window.webContents.send("cpu-temp", temp);
+  });
+}, 3000);

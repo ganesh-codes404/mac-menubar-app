@@ -150,34 +150,23 @@
       color: red;
       transform: scale(1.2);
     }
-/* Bottom navbar */
-.temps {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    #cpuFooter {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  opacity: 0.55;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+#cpuFooter ion-icon {
+  font-size: 12px;
+  opacity: 0.7;
 }
 
-.tmeps a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
 
-.temps a:hover {
-  background: #f1f1f1;
-  color: black;
-}
-
-.temps a.active {
-  background-color: #04AA6D;
-  color: white;
-}
 
 
   </style>
@@ -234,7 +223,12 @@
   box-shadow:0 4px 12px rgba(0,0,0,0.2);
   font-size:12px;">
 </div>
-<div id="temps"></div>
+<div id="cpuFooter">
+  <ion-icon name="hardware-chip-outline"></ion-icon>
+  <span id="cpuValue">--°C</span>
+</div>
+
+
 
 </body>
 </html>
